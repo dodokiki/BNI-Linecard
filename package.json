@@ -8,6 +8,7 @@
   },
   "scripts": {
     "scrape": "node scrape-bni-members.js",
+    "download-avatars": "node download-avatars-from-json.js",
     "build-cards": "node build-cards-from-json.js"
   }
 }

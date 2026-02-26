@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/:cardId", "destination": "/api/card" }
+    {
+      "source": "/:cardId",
+      "destination": "/api/card?cardId=$1"
+    }
   ]
 }

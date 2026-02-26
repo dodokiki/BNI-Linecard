@@ -7,7 +7,7 @@
 โปรเจกต์รองรับ**หลายการ์ด**ในหน้าเดียว:
 
 - **หน้ารายการ** – แสดงการ์ดทั้งหมดเป็นรายการ กดเลือกเพื่อเปิดการ์ดนั้น
-- **ลิงก์ตรงไปที่การ์ด** – ใช้ `index.html#รหัสการ์ด` เช่น `index.html#dodo` (เวลาแชร์ใน LINE ให้แชร์ลิงก์แบบมี # เพื่อให้เปิดมาที่การ์ดคนนั้นเลย)
+- **ลิงก์ตรงไปที่การ์ด** – ในเบราว์เซอร์ใช้ `index.html#รหัสการ์ด` เช่น `#dodo` ได้ แต่**เวลาแชร์ใน LINE ต้องใช้ลิงก์แบบ path** (เช่น `https://yoursite.com/dodo`) ถึงจะขึ้นเป็นการ์ด rich preview
 
 ข้อมูลการ์ดอยู่ที่ **`cards-data.js`** แก้ไขหรือเพิ่มการ์ดในอาร์เรย์ `window.CARDS`
 
@@ -32,13 +32,21 @@
 
 จากนั้นเปิด `index.html` จะเห็นรายการการ์ดรวมทั้งคุณและสมาชิก BNI พร้อมรูป (แต่ละการ์ดมีลิงก์ไปโปรไฟล์ BNI)
 
-## ส่งใน LINE เป็น Card (Flex-style preview)
+## ส่งใน LINE เป็น Flex message (การ์ด rich preview)
 
 เวลาส่งลิงก์ในแชท LINE แล้วให้ขึ้นเป็นการ์ดแบบ rich preview (หัวข้อ + คำอธิบาย + รูป) ต้อง **อัปโหลดขึ้นเว็บ** (แนะนำ Vercel) เพราะ LINE จะดึง Open Graph จากลิงก์นั้นมาแสดง
 
-- **ใช้ลิงก์แบบ path:** `https://bni-linecard.vercel.app/dodo` (ไม่ใช้ `#dodo`) — เว็บมี API สำหรับ path แต่ละการ์ด เพื่อส่ง og:title, og:description, og:image ตามคนนั้น
-- ปุ่ม **「ส่งไปที่ LINE」** และ **「แชร์นามบัตรนี้」** จะแชร์ลิงก์รูปแบบ `https://yoursite.com/รหัสการ์ด` ให้คนรับเห็นการ์ดแบบ Flex
-- ถ้าการ์ดมี `avatar` (รูปในโฟลเดอร์ `avatars/`) จะถูกใช้เป็น og:image อัตโนมัติ
+1. **ตั้งค่า URL เว็บที่ deploy แล้ว** ใน `cards-data.js` บรรทัด `window.LINE_CARD_BASE_URL` ให้ชี้ไปที่โดเมนจริง (เช่น `https://bni-linecard.vercel.app`) — ตอนแชร์หรือส่งไปที่ LINE จะใช้ URL นี้เสมอ จึงทำให้ใน LINE ขึ้นเป็นการ์ด Flex ได้แม้เปิดจาก localhost
+2. **ใช้ลิงก์แบบ path:** `https://bni-linecard.vercel.app/dodo` (ไม่ใช้ `#dodo`) — เว็บมี API สำหรับ path แต่ละการ์ด เพื่อส่ง og:title, og:description, og:image ตามคนนั้น
+3. ปุ่ม **「ส่งไปที่ LINE」** และ **「แชร์นามบัตรนี้」** จะแชร์ลิงก์รูปแบบ `https://yoursite.com/รหัสการ์ด` ให้คนรับเห็นการ์ดแบบ Flex
+4. ถ้าการ์ดมี `avatar` (รูปในโฟลเดอร์ `avatars/`) จะถูกใช้เป็น og:image อัตโนมัติ การ์ดที่ไม่มีรูปจะใช้ `card-preview.png` (ใส่ไว้ที่ root ของโปรเจกต์ถ้าต้องการ)
+5. ก่อน deploy ต้องมีไฟล์ **`cards.json`** (รัน `npm run build-cards` จะอัปเดตจาก cards-data.js และ bni-members.json)
+
+### ถ้าใน LINE ยังไม่ขึ้นเป็นการ์ด (เห็นแค่ลิงก์ธรรมดา)
+
+- **ตรวจสอบลิงก์ที่แชร์** ต้องเป็น `https://โดเมนคุณ/รหัสการ์ด` (ไม่มี `#` ด้านท้าย) เช่น `https://bni-linecard.vercel.app/ajcharaporn-chanchaew`
+- **LINE แคช preview** – ลองแชร์ลิงก์ที่ต่อท้าย `?v=1` แล้วส่งใหม่ (เช่น `https://bni-linecard.vercel.app/ajcharaporn-chanchaew?v=1`) เพื่อให้ LINE ดึง meta ใหม่
+- **ต้องมีรูป** – LINE จะแสดงเป็นการ์ดสวยขึ้นเมื่อมี `og:image` ดังนั้นการ์ดควรมี `avatar` หรือมีไฟล์ `card-preview.png` ที่ root
 
 ## แชร์
 

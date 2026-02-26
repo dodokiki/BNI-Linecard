@@ -18,7 +18,11 @@ function escapeRe(s) {
 }
 
 module.exports = function handler(req, res) {
-  const cardId = (req.query && req.query.cardId) || '';
+  let cardId = (req.query && req.query.cardId) || '';
+  if (!cardId && req.url) {
+    const pathname = req.url.split('?')[0] || '';
+    cardId = pathname.replace(/^\//, '').split('/')[0] || '';
+  }
   if (!cardId) {
     res.status(404).send('Not found');
     return;
@@ -39,7 +43,10 @@ module.exports = function handler(req, res) {
   const pageUrl = `${baseUrl}/${cardId}`;
   const title = `${card.name} | นามบัตรดิจิทัล`;
   const desc = [card.title, card.company, card.description].filter(Boolean).map(s => (s || '').replace(/^"|"$/g, '')).join(' · ').slice(0, 200) || 'ดูนามบัตรดิจิทัล';
-  const imageUrl = card.avatar ? (card.avatar.startsWith('http') ? card.avatar : `${baseUrl}/${card.avatar}`) : '';
+  // LINE ต้องมี og:image (absolute URL) ถึงจะแสดงเป็นการ์ดแบบ rich preview
+  const imageUrl = card.avatar
+    ? (card.avatar.startsWith('http') ? card.avatar : `${baseUrl}/${card.avatar}`)
+    : `${baseUrl}/card-preview.png`;
 
   let html;
   try {
@@ -53,7 +60,7 @@ module.exports = function handler(req, res) {
     [/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title.replace(/"/g, '&quot;')}">`],
     [/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">`],
     [/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${pageUrl}">`],
-    [/<meta property="og:image" content="[^"]*">/, imageUrl ? `<meta property="og:image" content="${imageUrl}">` : ''],
+    [/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${imageUrl.replace(/"/g, '&quot;')}">`],
     [/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title.replace(/"/g, '&quot;')}">`],
     [/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${desc.replace(/"/g, '&quot;')}">`],
     [/<title>[^<]*<\/title>/, `<title>${title.replace(/</g, '&lt;')}</title>`],

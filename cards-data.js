@@ -17,10 +17,10 @@ window.CARDS = [
     web: 'https://www.aitrainerthailand.com/',
     webLabel: 'www.aitrainerthailand.com',
     address: null,
+    avatar: null,
     links: [
       { label: 'Facebook - AI Trainer Thailand', url: 'https://www.facebook.com/AITrainerThailand/', class: 'link-fb' },
       { label: 'AI Trainer Thailand - เรียน AI เพื่อธุรกิจ', url: 'https://www.aitrainerthailand.com/', class: 'link-line' },
-      { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=8kbmOXLURKcmXzoNyeCftg%3D%3D&cmsv3=true&name=Watcharapol+Limthammalert', class: 'link-line' },
     ],
     lineUrl: null
   },
@@ -38,6 +38,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '189/6 หมู่บ้าน บดินทร ซอยนิมิตใหม่ 9/1, แขวงทรายกองดิน, เขตคลองสามวา, กรุงเทพมหานคร, 10510, ประกันชีวิต ประกันสุขภาพ ประกันอุบัติเหตุ ของกลุ่มองค์กร',
+    avatar: 'avatars/ajcharaporn-chanchaew.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=NrKpO%2BK3Fbwp2lCwrtpaSA%3D%3D&cmsv3=true&name=Ajcharaporn+Chanchaew', class: 'link-line' },
     ],
@@ -57,6 +58,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '276/32 Isaraparb Road, Wataroon, Bangkokyai, Bangkok, 10600, www.facebook.com, Supplier of engineered wood flooring with durability and elegant design, Provider of outdoor WPC (wood plastic composite) decking and solutions',
+    avatar: 'avatars/anan-kongsawangchai.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=OKYvdu0BvAipjGkOj1eRAQ%3D%3D&cmsv3=true&name=Anan+Kongsawangchai', class: 'link-line' },
     ],
@@ -76,6 +78,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '16/5 หมู่ที่ 15, ตำบลบึงคำพร้อย, อำเภอลำลูกกา, จังหวัดปทุมธานี, 12150, ผู้เชี่ยวชาญด้านงานแก้น้ำรั่วซึมหลังคา พื้น ผนัง และดาดฟ้า, แก้ปัญหาน้ำรั่วซึมได้ทุกสภาพพื้นผิวอย่างมีประสิทธิภาพ, ใช้ระบบกันซึมมาตรฐานอเมริกาและยุโรป',
+    avatar: 'avatars/anucha-chantasuk.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=2sk9txM5APwb%2B%2BfqoLt%2B9Q%3D%3D&cmsv3=true&name=Anucha+Chantasuk', class: 'link-line' },
     ],
@@ -95,6 +98,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '729/111-112 ถนนรัชดาภิเษก, แขวงบางโพงพาง, เขตยานนาวา, กรุงเทพมหานคร, 10120, บริการทำความสะอาด งาน Big cleaning, บ้าน คอนโด ร้านอาหาร คาเฟ่ โชว์รูม shop อาคารพาณิชย์ คลีนิกความงาน หลังตกแต่ง รีโนเวท, โรยตัวที่สูง ทำความสะอาดกระจกอาคาร',
+    avatar: 'avatars/anunya-chandawan.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=Z1KgvX6JhU8M8bzACj6RMw%3D%3D&cmsv3=true&name=Anunya+Chandawan', class: 'link-line' },
     ],
@@ -114,6 +118,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '1999 ถ.เพชรบุรีตัดใหม่, แขวงบางกะปิ, เขตห้วยขวาง, กรุงเทพฯ, 10310, www.blu-gas.com, For over 42 years, we have attending in safety and quality of LP Gas, and Petrochemical system works for maximum benefit of our customers.',
+    avatar: 'avatars/chatchai-lertplakorn.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=uNJyqe1UM%2F0yIFIlnwvwoQ%3D%3D&cmsv3=true&name=Chatchai+Lertplakorn', class: 'link-line' },
     ],
@@ -133,6 +138,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '10100',
+    avatar: 'avatars/chatree-boonnithititkul.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=KKbIfJ0cjxnoZoyxTUXoBA%3D%3D&cmsv3=true&name=Chatree+Boonnithititkul', class: 'link-line' },
     ],
@@ -152,6 +158,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '245/1 หมู่ที่ 1, ต.เทพารักษ์, อ.เมืองสมุทรปราการ, จ.สมุทรปราการ, 10270, grandfurnished.com, #Grandfurnished, เราเป็นโรงงานผลิตโซฟา เตียง เก้าอี้ทานอาหาร ประเภทงานบุหุ้ม โดยตรง',
+    avatar: 'avatars/eakpong-wongasa.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=46S2PuWuPoCSzn%2BVn5vPYg%3D%3D&cmsv3=true&name=Eakpong+Wongasa', class: 'link-line' },
     ],
@@ -171,6 +178,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: 'ถนนสายไหม แขวงสายไหม, เขตสายไหม, กรุงเทพมหานคร, 10220, Xingfu Clinic การแพทย์แผนจีน 中医, รักษาโรคทั่วไป ไมเกรน ภูมิแพ้ นอนไม่หลับ, ข้อเข่าเสื่อม โรคปวด ออฟฟิศซินโดรม, โรคเครียด โรคในเด็ก โรคในสตรี',
+    avatar: 'avatars/junqing-huang.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=7qCdLOJaDq7XPeAzKi1wgw%3D%3D&cmsv3=true&name=Junqing+Huang', class: 'link-line' },
     ],
@@ -190,6 +198,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '25/99 หมู่ที่ 8, ต.ลาดสวาย, อ.ลำลูกกา, จ.ปทุมธานี, 12150',
+    avatar: 'avatars/kannapat-pantong.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=hXiC2Uxwq%2FT5246oM0LCMA%3D%3D&cmsv3=true&name=Kannapat+Pantong', class: 'link-line' },
     ],
@@ -209,6 +218,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '9/25 หมู่ 2 ปภาวรินทร์, ต.หอมเกร็ด, อ.สามพราน, จ.นครปฐม, 73110, www.satinbed.com, ตู่นะค่ะ, ที่นอนและเครื่องนอนแบรนด์ซาติน ยินดีให้บริการ ธุรกิจโรงแรมทุกขนาด ตัวแทนจำหน่ายทั่วประเทศ',
+    avatar: 'avatars/kanyakorn-tiemsri.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=4u6%2FoaFaYfR3ZkVk1J7inA%3D%3D&cmsv3=true&name=Kanyakorn+Tiemsri', class: 'link-line' },
     ],
@@ -228,6 +238,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '282/413 Centric Ratchada-Huai Khwang, Ratchadaphisek Rd., Huai Khwang, Huai Khwang, Bangkok, 10310, รับถ่ายทำวิดีโอและภาพนิ่ง ในรูปแบบ ออนไลน์และออฟไลน์ งาน company profile video สำหรับ องค์กร,งานอีเว้นท์,งานโฆษณาสินค้า งานวิดีโอธุรกิจSME ในงบไม่เกิน 1แสนบาท',
+    avatar: 'avatars/kittipong-sirinawakul.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=9NcQBUkP%2BtrXHlKZj%2BVgzw%3D%3D&cmsv3=true&name=Kittipong+Sirinawakul', class: 'link-line' },
     ],
@@ -247,6 +258,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: 'แขวงอนุเสาวรีย์, เขตบางเขน, กรุงเทพมหานคร, 10220, Production house',
+    avatar: 'avatars/komsun-sriyabhandha.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=ffJPAguhuwju2E1JZwAg%2Bg%3D%3D&cmsv3=true&name=Komsun+Sriyabhandha', class: 'link-line' },
     ],
@@ -266,6 +278,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '356 ถนนวัชรพล, แขวงท่าแร้ง, เขตบางเขน, กรุงเทพมหานคร, 10220',
+    avatar: 'avatars/napat-surasmo.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=LldV5Zk79AvmMC2cU9%2FeFg%3D%3D&cmsv3=true&name=Napat+Surasmo', class: 'link-line' },
     ],
@@ -285,6 +298,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '551/79 ถนนสาธุประดิษฐ์, แขวงช่องนนทรี, เขตยานนาวา, กรุงเทพมหานคร, 10120, Digital Marketing Consult & Coaching ให้คำปรึกษา และบริการ รวมถึงการสอนใช้เครื่องมือ Online เพื่อความเติบโตของธุรกิจ, รับยิง Ads FB, รับทำคอนเทนต์ Artwork & Clip',
+    avatar: 'avatars/narudee-kittinanthapanya.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=JM0vWg5EzrgzdcwziorSlA%3D%3D&cmsv3=true&name=Narudee+Kittinanthapanya', class: 'link-line' },
     ],
@@ -304,6 +318,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '100/12ม.12ถ.โรจนะ-วังน้อย ต.ลำตาเสา, อ.วังน้อย, จ.พระนครศรีอยุธยา, 13170, ออกแบบและก่อสร้าง โรงงาน คลังสินค้า อาคาร สำนักงาน, ก่อสร้างบ้านหรู',
+    avatar: 'avatars/natthapon-khamchoo.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=NxUxh4enSjPxoaxbbEb%2Bvw%3D%3D&cmsv3=true&name=Natthapon+Khamchoo', class: 'link-line' },
     ],
@@ -323,6 +338,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '35/23 Soi Si Bamphen, Thung Maha Mek, Sathon, Bangkok, 10120, Expert in designing and producing professional uniforms, Certified manufacturer of the official Thai national flag in compliance with the Royal Gazette, ผู้เชี่ยวชาญด้านการออกแบบและผลิตชุดยูนิฟอร์มระดับมืออาชีพ',
+    avatar: 'avatars/nattiya-chimchavee.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=qtqFtgkPBmTiUtSS17x6aw%3D%3D&cmsv3=true&name=Nattiya+Chimchavee', class: 'link-line' },
     ],
@@ -342,6 +358,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '56 ถ.พิบูลสงคราม, ต.สวนใหญ่, อ.เมืองนนทบุรี, จ.นนทบุรี, 11000, จำหน่ายวัสดุก่อสร้างทุกชนิด และเป็นผู้แทนจำหน่ายสินค้าวัสดุก่อสร้างของ SCG, • Supply a full range of construction materials from foundation to finishing., • Authorized distributor of SCG building materials.',
+    avatar: 'avatars/ninlada-suwiwatchai.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=trvQqlf2ufMHAqKvL69YCQ%3D%3D&cmsv3=true&name=Ninlada+Suwiwatchai', class: 'link-line' },
     ],
@@ -361,6 +378,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '102/14 หมู่ที่ 6, ต.บางวัว, อ.บางปะกง, จ.ฉะเชิงเทรา, 24180, www.win-income.com, A specialist in aluminium and glass façade systems, providing complete solutions in design, manufacturing, and installation with professional engineering teams and world-class facilities. We partner with leading brands such as Schüco, Reynaers, Hyline, YKK, and Alumet, delivering projects nationwide — from luxury residences to large-scale commercial buildings., ผู้เชี่ยวชาญด้าน อลูมิเนียมและกระจก Façade ครบวงจร ตั้งแต่ ออกแบบ ผลิต ติดตั้ง พร้อมทีมวิศวกรมืออาชีพ และโรงงานมาตรฐานสากล เราเป็นพันธมิตรกับแบรนด์ระดับโลก เช่น Schüco, Reynaers, Hyline, YKK, Alumet ครอบคลุมโครงการตั้งแต่บ้านหรูจนถึงอาคารขนาดใหญ่ทั่วประเทศ',
+    avatar: 'avatars/nunthapak-rodboonpha.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=pilBVdJg7d65I1ZOxVLX5A%3D%3D&cmsv3=true&name=Nunthapak+Rodboonpha', class: 'link-line' },
     ],
@@ -380,6 +398,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '1/17 Soi Chaloemprakeit Rama 9, Soi 25 Nongbon, Prawet, Bangkok, 10250, www.idcideacomplete.com, ออกแบบ,ที่ปรึกษาโครงการและ ก่อสร้าง บ้านพักอาศัย',
+    avatar: 'avatars/peerapong-chaingoentra.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=dxRd4xbER5xr598Y0tMGKA%3D%3D&cmsv3=true&name=Peerapong+Chaingoentra', class: 'link-line' },
     ],
@@ -399,6 +418,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '118/124 หมู่ที่ 8, ตำบลเสาธงหิน, อำเภอบางใหญ่, จังหวัดนนทบุรี, 11140, Expert in developing mobile applications for both iOS and Android platforms., Specializes in integrating AI coding to enhance app performance and innovation., Focus on creating advanced, future-ready applications that stay ahead of trends.',
+    avatar: 'avatars/phantarabhorn-wachanachusit.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=CfYyvpoojLSnI8rz9agY8A%3D%3D&cmsv3=true&name=Phantarabhorn+Wachanachusit', class: 'link-line' },
     ],
@@ -418,6 +438,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '10240',
+    avatar: 'avatars/pipat-thanaudomkul.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=yfZonDwDE3MUkB6kyAy%2FqQ%3D%3D&cmsv3=true&name=Pipat+Thanaudomkul', class: 'link-line' },
     ],
@@ -437,6 +458,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '43/5 Moo.8, Ladsawai, Lumlukka, Pathumthani, 12150, รับออกแบบ-ติดตั้ง และจัดจำหน่าย ระบบกล้องวงจรปิด ใน บ้าน, คฤหาสน์​, ออฟฟิศ, อาคารพาณิชย์, รีสอร์ท, ร้านอาหาร, โรงงานอุตสาหกรรม​',
+    avatar: 'avatars/porames-sawasdee.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=UIKlsIqrhu79PJNLtXhfzg%3D%3D&cmsv3=true&name=Porames+Sawasdee', class: 'link-line' },
     ],
@@ -456,6 +478,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '22/5 หมู่ที่ 11, ตำบลคลองเปรง, อำเภอเมือง, จังหวัดฉะเชิงเทรา, 24000, รับเหมาถมที่ ถมดิน ถมลูกรังเคลียริ่งพื้นที่ ปักเสาเข็ม ขุดบ่อขุดสวน บริการให้เช่า ทุบตึก รื้อป่า ฝั่งท่อถนน ทำถนนคอนกรีต ถนนลาดยาง กำแพงกันดิน, รถแบ็คโฮทุกขนาด รถไถ รถตีนตะขาบรถบดเล็ก รถแย็คเล็ก รถเฮี๊ยบ3 ตัน ครบวงจร, We provide full-service land preparation, including soil and laterite filling, land clearing, pile driving, pond and garden excavation.',
+    avatar: 'avatars/ravikorn-chunhasri.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=JB34K7rE4fbtwIamjpNHKQ%3D%3D&cmsv3=true&name=Ravikorn+Chunhasri', class: 'link-line' },
     ],
@@ -475,6 +498,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '42/294 ซอย นิมิตใหม่6/1, แขวงมีนบุรี, เขตมีนบุรี, กรุงเทพมหานคร, 10510, วางแผนภาษีส่วนบุคคลและภาษีนิติบุคคล',
+    avatar: 'avatars/raweewan-bunsri.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=3gdfzNRbkhuAkLiSbchsYw%3D%3D&cmsv3=true&name=Raweewan+Bunsri', class: 'link-line' },
     ],
@@ -494,6 +518,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '111/72 MOO3 KANCHANAPISEK RD., PLAIBANG, BANGKRUAI, NONTHABURI, 11130',
+    avatar: 'avatars/sireepattra-srihamool.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=hQ4LFTFRVvqGGiO3NxVzEQ%3D%3D&cmsv3=true&name=Sireepattra+Srihamool', class: 'link-line' },
     ],
@@ -513,6 +538,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: 'ถนนร่มเกล้า แขวงคลองสามประเวศ, เขตลาดกระบัง, กรุงเทพฯ, 10520, ผลิตโคมไฟและงานประติมากรรมสั่งทำตามแบบ โคมไฟแขวน โคมไฟตั้งพื้น โคมไฟตั้งโต๊ะ, โคมไฟติดผนัง โคมไฟตั้งโต๊ะ โคมชันเดอเลีย, Expertise in creating artistic sculptures for decorative and functional purposes., - Combining creativity and technical skills to deliver high-quality works.',
+    avatar: 'avatars/somprasong-pisansorakit.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=k8q43gIfiFrEzR43nVuOwg%3D%3D&cmsv3=true&name=Somprasong+Pisansorakit', class: 'link-line' },
     ],
@@ -532,6 +558,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '89/15 Baan Klangmuang The Edition Rama 9 - Krungthep Kreetha, Soi Kanchanapisek 23, Thap Chang, Saphan Sung, Bangkok, 10250, รับบริการขนส่งสินค้าระหว่างประเทศ, ทางเรือ เครื่องบิน รถบรรทุก, เดินพิธีการศุลการกร นำเข้า /ส่งออก',
+    avatar: 'avatars/suphawinee-arunothai.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=W%2FWrbq%2FKcLf0%2F6eCcBAFAw%3D%3D&cmsv3=true&name=Suphawinee+Arunothai', class: 'link-line' },
     ],
@@ -551,6 +578,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '57/253 หมู่5, ต.พันท้ายนรสิงห์, อ.เมืองสมุทรสาคร, จ.สมุทรสาคร, 74000, Expert, 1. Installation work of sanitary water supply system, 2. Firefighting installation work',
+    avatar: 'avatars/suteera-intarapasert.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=VaTeRA%2B5SOzg1%2FHlyyaOhQ%3D%3D&cmsv3=true&name=Suteera+Intarapasert', class: 'link-line' },
     ],
@@ -570,6 +598,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '88/138 ม.1, ต.ราชาเทวะ, อ.บางพลี, จ.สมุทรปราการ, 10540, www.tee-creative.com, ผู้เชี่ยวชาญด้านการก่อสร้างและรีโนเวทครบวงจรแบบ One Stop Service, รับสร้างบ้าน อพาร์ทเม้นท์ รีสอร์ท โชว์รูม และร้านอาหาร',
+    avatar: 'avatars/teerayut-temram.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=8a%2FvLrvqrpXNhs2Uvm%2BkHA%3D%3D&cmsv3=true&name=Teerayut+Temram', class: 'link-line' },
     ],
@@ -589,6 +618,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '50/245 หมู่ที่ 2, ต.คลองข่อย, อ.ปากเกร็ด, จ.นนทบุรี, 11120, Professional custom-built furniture services., Tailored solutions for residential and commercial spaces., ให้บริการผลิตเฟอร์นิเจอร์บิวท์อินแบบมืออาชีพ',
+    avatar: 'avatars/thanatdon-phudithiranyasakul.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=uT76gqlLXPMOlTVgNUmZfA%3D%3D&cmsv3=true&name=Thanatdon+Phudithiranyasakul', class: 'link-line' },
     ],
@@ -608,6 +638,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '965/41 หมู่บ้าน พฤกษาวิลล์ 16/2, ถ.รังสิต-นครนายก ต.ประชาธิปัตย์, อ.ธัญบุรี, จ.ปทุมธานี, 12130, ผู้เชี่ยวชาญการออกแบบและติดตั้งระบบไฟฟ้าและสื่อสารที่มุ่งเน้นมาตรฐาน ความปลอดภัย และคุณภาพในอาคาร สำนักงาน ที่พักอาศัย โรงงาน โรงแรม โรงพยาบาล',
+    avatar: 'avatars/uthen-sitthipongporn.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=g8ED%2F1HX%2FoOugHB%2FQASQKQ%3D%3D&cmsv3=true&name=Uthen+Sitthipongporn', class: 'link-line' },
     ],
@@ -627,8 +658,29 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '278/13 Asoke-Dindang Road, Bangkapi, Huaikhwang, Bangkok, 10310, Digital Advertising Agency',
+    avatar: 'avatars/waranya-chuenjai.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=yljfNAOKZDBiri%2BcGb8N%2Bg%3D%3D&cmsv3=true&name=Waranya+Chuenjai', class: 'link-line' },
+    ],
+    lineUrl: null
+  },
+  {
+    id: 'watcharapol-limthammalert',
+    name: 'Watcharapol Limthammalert',
+    nickname: null,
+    title: null,
+    company: 'Watcharapol Limthammalert',
+    description: null,
+    tags: [],
+    tel: null,
+    telLink: null,
+    email: null,
+    web: null,
+    webLabel: null,
+    address: '56/46 หมู่บ้านพฤกษา 40, ตำบลคลองสาม, อำเภอคลองหลวง, จังหวัดปทุมธานี, 12120',
+    avatar: 'avatars/watcharapol-limthammalert.jpg',
+    links: [
+      { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=8kbmOXLURKcmXzoNyeCftg%3D%3D&cmsv3=true&name=Watcharapol+Limthammalert', class: 'link-line' },
     ],
     lineUrl: null
   },
@@ -646,6 +698,7 @@ window.CARDS = [
     web: null,
     webLabel: null,
     address: '59/999 หมู่ที่ 3, ต.คลองเกลือ, อ.ปากเกร็ด, จ.นนทบุรี, 11120, Solar rooftop design & installation, Solar trading >100kw, Solar + EMSS provider',
+    avatar: 'avatars/wuttipong-terdsathabun.jpg',
     links: [
       { label: 'โปรไฟล์ BNI', url: 'https://bangkok.bnithailand.com/bangkok-pavilion/th/memberdetails?encryptedMemberId=d3N2SUSqhm66mfrpX2nd0g%3D%3D&cmsv3=true&name=Wuttipong+Terdsathabun', class: 'link-line' },
     ],

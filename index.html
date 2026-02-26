@@ -362,12 +362,21 @@
       return div.innerHTML;
     }
 
+    function avatarSrc(path) {
+      if (!path) return '';
+      if (path.indexOf('http') === 0) return path;
+      // เปิดจากไฟล์ท้องถิ่น (file://) ใช้ path สัมพันธ์กับโฟลเดอร์นี้
+      var isFile = window.location.protocol === 'file:';
+      if (isFile) return path;
+      return (path.charAt(0) === '/' ? '' : '/') + path;
+    }
+
     function renderList() {
       var grid = document.getElementById('card-grid');
       if (!grid) return;
       grid.innerHTML = CARDS.map(function(card) {
         var avatar = card.avatar
-          ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
+          ? '<img src="' + escapeHtml(avatarSrc(card.avatar)) + '" alt="">'
           : '<div class="avatar-placeholder"></div>';
         return (
           '<a href="/' + escapeHtml(card.id) + '" class="card-preview">' +
@@ -389,7 +398,7 @@
       if (base.endsWith('/')) base = base.slice(0, -1);
       var cardUrl = base + '/' + card.id;
       var avatar = card.avatar
-        ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
+        ? '<img src="' + escapeHtml(avatarSrc(card.avatar)) + '" alt="">'
         : '<div class="avatar-placeholder"></div>';
       var contactRows = '';
       if (card.tel) {
@@ -508,12 +517,17 @@
       }
     }
     function getCurrentCardUrl() {
-      if (currentCardId) {
-        var base = window.location.origin + (window.location.pathname || '/').replace(/\/[^/]*$/, '') || window.location.origin;
+      if (!currentCardId) return window.location.href;
+      var base;
+      var deployBase = (typeof window.LINE_CARD_BASE_URL !== 'undefined' && window.LINE_CARD_BASE_URL) ? window.LINE_CARD_BASE_URL : '';
+      var isLocal = !window.location.origin || window.location.origin.indexOf('file') === 0 || window.location.origin.indexOf('localhost') !== -1 || window.location.origin.indexOf('127.0.0.1') !== -1;
+      if (deployBase && (isLocal || window.location.origin !== deployBase.replace(/\/$/, ''))) {
+        base = deployBase.replace(/\/$/, '');
+      } else {
+        base = window.location.origin + (window.location.pathname || '/').replace(/\/[^/]*$/, '') || window.location.origin;
         if (base.endsWith('/')) base = base.slice(0, -1);
-        return base + '/' + currentCardId;
       }
-      return window.location.href;
+      return base + '/' + currentCardId;
     }
     function shareCard() {
       var url = getCurrentCardUrl();
