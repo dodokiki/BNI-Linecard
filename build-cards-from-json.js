@@ -7,6 +7,7 @@ const path = require('path');
 
 const JSON_PATH = path.join(__dirname, 'bni-members.json');
 const CARDS_DATA_PATH = path.join(__dirname, 'cards-data.js');
+const CARDS_JSON_PATH = path.join(__dirname, 'cards.json');
 
 const EXISTING_CARDS = [
   {
@@ -185,7 +186,8 @@ window.CARDS = [
 `;
 
 fs.writeFileSync(CARDS_DATA_PATH, js, 'utf8');
-console.log('เขียน', CARDS_DATA_PATH, 'แล้ว รวม', uniqueCards.length, 'การ์ด');
+fs.writeFileSync(CARDS_JSON_PATH, JSON.stringify(uniqueCards, null, 0), 'utf8');
+console.log('เขียน', CARDS_DATA_PATH, 'และ', CARDS_JSON_PATH, 'แล้ว รวม', uniqueCards.length, 'การ์ด');
 if (bni.length === 0 && !fs.existsSync(JSON_PATH)) {
   console.log('ยังไม่มี bni-members.json — รัน npm run scrape ก่อน');
 }

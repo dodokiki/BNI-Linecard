@@ -345,7 +345,10 @@
 
     function getCardIdFromHash() {
       var hash = (window.location.hash || '').replace(/^#/, '');
-      return hash || null;
+      if (hash) return hash;
+      var path = (window.location.pathname || '').replace(/^\//, '').split('/')[0];
+      if (path && path !== 'index.html' && path !== '') return path;
+      return null;
     }
 
     function getCardById(id) {
@@ -367,7 +370,7 @@
           ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
           : '<div class="avatar-placeholder"></div>';
         return (
-          '<a href="#' + escapeHtml(card.id) + '" class="card-preview">' +
+          '<a href="/' + escapeHtml(card.id) + '" class="card-preview">' +
             '<div class="avatar-wrap">' + avatar + '</div>' +
             '<div class="profile-info">' +
               '<h1>' + escapeHtml(card.name) + '</h1>' +
@@ -382,7 +385,9 @@
 
     function renderCard(card) {
       if (!card) return;
-      var cardUrl = window.location.origin + window.location.pathname.replace(/\/$/, '') + '#' + card.id;
+      var base = window.location.origin + (window.location.pathname || '/').replace(/\/[^/]*$/, '') || window.location.origin;
+      if (base.endsWith('/')) base = base.slice(0, -1);
+      var cardUrl = base + '/' + card.id;
       var avatar = card.avatar
         ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
         : '<div class="avatar-placeholder"></div>';
@@ -484,7 +489,7 @@
     }
 
     document.getElementById('btn-back').addEventListener('click', function() {
-      window.location.hash = '';
+      window.location.href = '/';
       showList();
     });
     window.addEventListener('hashchange', route);
@@ -504,8 +509,9 @@
     }
     function getCurrentCardUrl() {
       if (currentCardId) {
-        var base = window.location.origin + window.location.pathname.replace(/\/$/, '');
-        return base + '#' + currentCardId;
+        var base = window.location.origin + (window.location.pathname || '/').replace(/\/[^/]*$/, '') || window.location.origin;
+        if (base.endsWith('/')) base = base.slice(0, -1);
+        return base + '/' + currentCardId;
       }
       return window.location.href;
     }
