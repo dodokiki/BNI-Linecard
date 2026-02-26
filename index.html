@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>นามบัตรดิจิทัล | Line Card</title>
+  <!-- Open Graph (อัปเดตตามการ์ดที่เปิดเมื่อมี hash ใน URL) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="นามบัตรดิจิทัล | Line Card">
+  <meta property="og:description" content="ดูนามบัตรดิจิทัล">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="th_TH">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="นามบัตรดิจิทัล | Line Card">
+  <meta name="twitter:description" content="ดูนามบัตรดิจิทัล">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: #2c2c2e;
+      min-height: 100vh;
+      padding: 24px 16px 80px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .line-card {
+      background: #fff;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    /* Profile */
+    .profile-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .avatar-wrap {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid #c9a227;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .avatar-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #eee 0%, #e0e0e0 100%);
+    }
+    .profile-info h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+    .nickname {
+      font-size: 0.95rem;
+      color: #c62828;
+      margin-bottom: 4px;
+    }
+    .title {
+      font-size: 0.9rem;
+      color: #616161;
+      font-weight: 500;
+    }
+    .company {
+      font-size: 0.85rem;
+      color: #757575;
+    }
+    /* Description */
+    .description-box {
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .description-box p {
+      font-size: 0.9rem;
+      color: #424242;
+      line-height: 1.45;
+    }
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      background: #e8e8e8;
+      color: #424242;
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+    /* Contact */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .contact-label {
+      flex-shrink: 0;
+      background: #1565c0;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      min-width: 52px;
+      text-align: center;
+    }
+    .contact-value {
+      font-size: 0.9rem;
+      color: #212121;
+      line-height: 1.5;
+    }
+    .contact-value a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
+    .contact-section {
+      margin-bottom: 20px;
+    }
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .btn-call {
+      flex: 1;
+      background: #1565c0;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-line {
+      flex: 1;
+      background: #06c755;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-secondary {
+      flex: 1;
+      background: #e8e8e8;
+      color: #424242;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-row .btn-secondary:hover,
+    .btn-call:hover,
+    .btn-line:hover {
+      opacity: 0.9;
+    }
+    /* Links */
+    .links {
+      margin-bottom: 20px;
+    }
+    .links a {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      text-decoration: underline;
+    }
+    .link-fb { color: #1877f2; }
+    .link-line { color: #06c755; }
+    /* Share */
+    .btn-share {
+      width: 100%;
+      background: #e8e8e8;
+      color: #424242;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      margin-bottom: 10px;
+    }
+    .btn-share:hover {
+      background: #ddd;
+    }
+    .btn-send-line {
+      width: 100%;
+      background: #06c755;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-send-line:hover {
+      background: #05b04c;
+    }
+    .btn-send-line::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+    /* หน้ารายการการ์ด */
+    #list-view { max-width: 420px; width: 100%; }
+    .list-header {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card-preview {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card-preview:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .card-preview .avatar-wrap {
+      width: 56px;
+      height: 56px;
+      border-width: 2px;
+    }
+    .card-preview .profile-info h1 { font-size: 1.05rem; margin-bottom: 0; }
+    .card-preview .nickname { font-size: 0.8rem; margin-bottom: 2px; }
+    .card-preview .title { font-size: 0.8rem; }
+    .card-preview .company { display: none; }
+    #card-view { display: none; max-width: 400px; width: 100%; }
+    #card-view.visible { display: block; }
+    #list-view.hidden { display: none; }
+    .btn-back {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-bottom: 14px;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.3); }
+    .card-link-box {
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: #616161;
+    }
+    .card-link-box strong { color: #333; }
+    .card-link-box a { color: #1565c0; word-break: break-all; }
+    .card-link-box .copy-btn {
+      margin-top: 6px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      background: #e0e0e0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .card-link-box .copy-btn:hover { background: #d0d0d0; }
+  </style>
+</head>
+<body>
+  <div id="list-view">
+    <h1 class="list-header">นามบัตรดิจิทัล</h1>
+    <div id="card-grid" class="card-grid"></div>
+  </div>
+
+  <div id="card-view">
+    <button type="button" class="btn-back" id="btn-back" aria-label="กลับ">← กลับหน้ารายการ</button>
+    <div id="card-content" class="line-card"><!-- เติมด้วย JS --></div>
+  </div>
+
+  <script src="cards-data.js"></script>
+  <script>
+    var CARDS = window.CARDS || [];
+    var currentCardId = null;
+
+    function getCardIdFromHash() {
+      var hash = (window.location.hash || '').replace(/^#/, '');
+      return hash || null;
+    }
+
+    function getCardById(id) {
+      return CARDS.find(function(c) { return c.id === id; }) || null;
+    }
+
+    function escapeHtml(s) {
+      if (!s) return '';
+      var div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function renderList() {
+      var grid = document.getElementById('card-grid');
+      if (!grid) return;
+      grid.innerHTML = CARDS.map(function(card) {
+        var avatar = card.avatar
+          ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
+          : '<div class="avatar-placeholder"></div>';
+        return (
+          '<a href="#' + escapeHtml(card.id) + '" class="card-preview">' +
+            '<div class="avatar-wrap">' + avatar + '</div>' +
+            '<div class="profile-info">' +
+              '<h1>' + escapeHtml(card.name) + '</h1>' +
+              (card.nickname ? '<p class="nickname">' + escapeHtml(card.nickname) + '</p>' : '') +
+              (card.title ? '<p class="title">' + escapeHtml(card.title) + '</p>' : '') +
+              (card.company ? '<p class="company">' + escapeHtml(card.company) + '</p>' : '') +
+            '</div>' +
+          '</a>'
+        );
+      }).join('');
+    }
+
+    function renderCard(card) {
+      if (!card) return;
+      var cardUrl = window.location.origin + window.location.pathname.replace(/\/$/, '') + '#' + card.id;
+      var avatar = card.avatar
+        ? '<img src="' + escapeHtml(card.avatar) + '" alt="">'
+        : '<div class="avatar-placeholder"></div>';
+      var contactRows = '';
+      if (card.tel) {
+        var telLink = card.telLink || card.tel.replace(/\D/g, '');
+        contactRows += '<div class="contact-item"><span class="contact-label">TEL</span><span class="contact-value"><a href="tel:' + telLink + '">' + escapeHtml(card.tel) + '</a></span></div>';
+      }
+      if (card.email) {
+        contactRows += '<div class="contact-item"><span class="contact-label">EMAIL</span><span class="contact-value"><a href="mailto:' + escapeHtml(card.email) + '">' + escapeHtml(card.email) + '</a></span></div>';
+      }
+      if (card.web) {
+        contactRows += '<div class="contact-item"><span class="contact-label">WEB</span><span class="contact-value"><a href="' + escapeHtml(card.web) + '" target="_blank" rel="noopener">' + escapeHtml(card.webLabel || card.web) + '</a></span></div>';
+      }
+      if (card.address) {
+        contactRows += '<div class="contact-item"><span class="contact-label">ADDR</span><span class="contact-value">' + card.address + '</span></div>';
+      }
+      var tagsHtml = (card.tags || []).map(function(t) {
+        return '<span class="tag">' + escapeHtml(t) + '</span>';
+      }).join('');
+      var linksHtml = (card.links || []).map(function(l) {
+        return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener" class="' + (l.class || '') + '">' + escapeHtml(l.label) + '</a>';
+      }).join('');
+      var lineBtn = card.lineUrl
+        ? '<button type="button" class="btn-line" onclick="window.open(\'' + escapeHtml(card.lineUrl) + '\', \'_blank\')">LINE</button>'
+        : '<button type="button" class="btn-line" onclick="alert(\'เพิ่ม lineUrl ใน cards-data.js\')">LINE</button>';
+      var telLink = card.telLink || (card.tel ? card.tel.replace(/\D/g, '') : '');
+      var html =
+        '<div class="profile-row">' +
+          '<div class="avatar-wrap">' + avatar + '</div>' +
+          '<div class="profile-info">' +
+            '<h1>' + escapeHtml(card.name) + '</h1>' +
+            (card.nickname ? '<p class="nickname">' + escapeHtml(card.nickname) + '</p>' : '') +
+            (card.title ? '<p class="title">' + escapeHtml(card.title) + '</p>' : '') +
+            (card.company ? '<p class="company">' + escapeHtml(card.company) + '</p>' : '') +
+          '</div>' +
+        '</div>' +
+        (card.description ? '<div class="description-box"><p>' + escapeHtml(card.description) + '</p></div>' : '') +
+        (tagsHtml ? '<div class="tags">' + tagsHtml + '</div>' : '') +
+        '<div class="contact-section">' + contactRows + '</div>' +
+        '<div class="btn-row">' +
+          (card.tel ? '<button type="button" class="btn-call" onclick="window.location.href=\'tel:' + telLink + '\'">โทร</button>' : '') +
+          lineBtn +
+        '</div>' +
+        '<div class="btn-row">' +
+          '<button type="button" class="btn-secondary">One Page</button>' +
+          '<button type="button" class="btn-secondary">Profile</button>' +
+        '</div>' +
+        (linksHtml ? '<div class="links">' + linksHtml + '</div>' : '') +
+        '<div class="card-link-box"><strong>ลิงก์การ์ดนี้ (ส่งใน LINE):</strong><br><a href="' + escapeHtml(cardUrl) + '" id="card-link-anchor" target="_blank" rel="noopener">' + escapeHtml(cardUrl) + '</a><br><button type="button" class="copy-btn" onclick="copyCardLink()">คัดลอกลิงก์</button></div>' +
+        '<button type="button" class="btn-share" onclick="shareCard()">แชร์นามบัตรนี้</button>' +
+        '<button type="button" class="btn-send-line" onclick="sendToLine()">ส่งไปที่ LINE</button>';
+      var el = document.getElementById('card-content');
+      if (el) el.innerHTML = html;
+    }
+
+    function updateMeta(card) {
+      if (!card) return;
+      document.title = card.name + ' | นามบัตรดิจิทัล';
+      var title = card.name + (card.company ? ' - ' + card.company : '');
+      var desc = (card.title || '') + (card.description ? ' | ' + (card.description.replace(/^"|"$/g, '')) : '');
+      var setMeta = function(name, content) {
+        var el = document.querySelector('meta[property="' + name + '"], meta[name="' + name + '"]');
+        if (el) el.setAttribute('content', content);
+      };
+      setMeta('og:title', title);
+      setMeta('og:description', desc);
+      setMeta('twitter:title', title);
+      setMeta('twitter:description', desc);
+      var url = window.location.href;
+      if (url.indexOf('http') === 0) {
+        setMeta('og:url', url);
+        var img = document.querySelector('meta[property="og:image"]');
+        if (img && !img.getAttribute('content')) img.setAttribute('content', url.replace(/\/$/, '').replace(/#.*/, '') + '/card-preview.png');
+      }
+    }
+
+    function showList() {
+      currentCardId = null;
+      document.getElementById('list-view').classList.remove('hidden');
+      document.getElementById('card-view').classList.remove('visible');
+      document.title = 'นามบัตรดิจิทัล | Line Card';
+    }
+
+    function showCard(id) {
+      var card = getCardById(id);
+      if (!card) { showList(); return; }
+      currentCardId = id;
+      document.getElementById('list-view').classList.add('hidden');
+      document.getElementById('card-view').classList.add('visible');
+      renderCard(card);
+      updateMeta(card);
+    }
+
+    function route() {
+      var id = getCardIdFromHash();
+      if (id) showCard(id);
+      else showList();
+    }
+
+    document.getElementById('btn-back').addEventListener('click', function() {
+      window.location.hash = '';
+      showList();
+    });
+    window.addEventListener('hashchange', route);
+
+    renderList();
+    route();
+
+    function copyCardLink() {
+      var url = getCurrentCardUrl();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function() {
+          alert('คัดลอกลิงก์แล้ว ส่งใน LINE ได้เลย');
+        });
+      } else {
+        prompt('ลิงก์การ์ดนี้:', url);
+      }
+    }
+    function getCurrentCardUrl() {
+      if (currentCardId) {
+        var base = window.location.origin + window.location.pathname.replace(/\/$/, '');
+        return base + '#' + currentCardId;
+      }
+      return window.location.href;
+    }
+    function shareCard() {
+      var url = getCurrentCardUrl();
+      var card = currentCardId ? getCardById(currentCardId) : null;
+      var title = card ? ('นามบัตร - ' + card.name) : 'นามบัตรดิจิทัล';
+      var text = card ? (card.company || card.title || '') : 'ดูนามบัตรดิจิทัล';
+      if (navigator.share) {
+        navigator.share({ title: title, text: text, url: url }).catch(function() { fallbackShare(url); });
+      } else {
+        fallbackShare(url);
+      }
+    }
+    function fallbackShare(url) {
+      url = url || getCurrentCardUrl();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url);
+        alert('คัดลอกลิงก์นามบัตรนี้แล้ว ส่งใน LINE ได้เลย');
+      } else {
+        prompt('ลิงก์การ์ดนี้ (ส่งใน LINE):', url);
+      }
+    }
+    function sendToLine() {
+      var url = getCurrentCardUrl();
+      if (url.indexOf('http') === 0) {
+        window.open('https://line.me/R/msg/text/?' + encodeURIComponent(url), '_blank', 'noopener');
+      } else {
+        fallbackShare(url);
+        alert('อัปโหลดหน้านี้ขึ้นเว็บก่อน แล้วค่อยกดส่งไปที่ LINE ถึงจะแสดงเป็น Card ได้');
+      }
+    }
+  </script>
+</body>
+</html>

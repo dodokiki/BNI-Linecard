@@ -1,0 +1,13 @@
+{
+  "name": "line-card",
+  "version": "1.0.0",
+  "description": "นามบัตรดิจิทัล / Line Card",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  },
+  "scripts": {
+    "scrape": "node scrape-bni-members.js",
+    "build-cards": "node build-cards-from-json.js"
+  }
+}
